@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="ttt.css">
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+  <main>
+    <div id="board" role="grid">
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+      <div class="cell" data-cell role="gridcell"></div>
+    </div>
+    <div id="status" aria-live="polite">Player X's turn</div>
+    <button id="restart">Restart</button>
+  </main>
+
+  <script src="TTT.js"></script>
+</body>
+</html>
