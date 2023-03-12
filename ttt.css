@@ -1,85 +1,98 @@
-/* Reset default styles */
-* {
-    box-sizing: border-box;
+/* Set the background image to a gradient */
+body {
+    background-image: linear-gradient(315deg, #0F2027 0%, #203A43 74%);
+    background-size: cover;
+    background-position: center center;
     margin: 0;
     padding: 0;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    color: white; /* Set the text color to white */
   }
   
-  body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
+  /* Style the heading element */
   h1 {
+    font-size: 3em;
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    margin-top: 0.5em;
   }
   
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+  /* Style the game board element */
   #board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: 300px;
-    height: 300px;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto; /* Center the board horizontally */
     border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.5); /* Set the background color to a semi-transparent white */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Add a subtle box shadow */
   }
   
+  /* Style the individual cells of the game board */
   .cell {
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 60px;
+    align-items: center;
+    font-size: 3em;
+    color: white;
     font-weight: bold;
-    color: #333;
+    width: calc(400px / 3);
+    height: calc(400px / 3);
+    border: 1px solid #0F2027; /* Add a border around each cell */
+    box-sizing: border-box;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out; /* Add a smooth transition on hover */
   }
   
+  /* Style the hover state of the cells */
   .cell:hover {
-    background-color: #f2f2f2;
+    background-color: rgba(255, 255, 255, 0.2); /* Set the background color to a slightly more opaque white */
   }
   
-  .cell[data-cell="X"] {
-    color: #f44336;
-  }
-  
-  .cell[data-cell="O"] {
-    color: #2196f3;
-  }
-  
+  /* Style the game status message element */
   #status {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1em;
   }
   
-  button#restart {
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #4caf50;
-    color: #fff;
+  /* Style the restart button element */
+  #restart {
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+    margin-top: 1em;
+    font-size: 1.2em;
+    background-color:#975d10; /* Set the background color to a dark orange */
+    color: #0F2027; /* Set the text color to a dark blue */
     border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+    padding: 0.5em 1em;
   }
   
-  button#restart:hover {
-    background-color: #388e3c;
+  /* Style the hover state of the restart button */
+  #restart:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Set the background color to a slightly more opaque white */
   }
   
+  /* Style the winning cells */
+  .cell.winning {
+    background-color: #e93455; /* Set the background color to a bright red */
+  }
+  
+  /* Style the X player */
+  .X {
+    color: #0F2027; /* Set the text color to a dark blue */
+  }
+  
+  /* Style the O player */
+  .O {
+    color: #0F2027; /* Set the text color to a dark blue */
+  }
+  
+  /* Style the winning player */
+  .winning-player {
+    background-color: #975d10; /* Set the background color of winner*/
+  }  
